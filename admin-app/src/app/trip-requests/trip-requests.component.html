@@ -1,0 +1,28 @@
+<!-- <app-homecomponent></app-homecomponent> -->
+<table class="table table-bordered">
+    
+  
+  <!-- <tr>
+    <td (click)="sortByName()"><button type="submit" class="btn btn-success">sortByName</button></td>
+  </tr> -->
+   
+  <tr>
+  <th>Booking Id</th>
+  <th>Source</th>
+  <th>Destination</th>
+  
+  <th>Customer ID</th>
+  <!-- <th>Estimated Fare</th> -->
+  
+</tr>
+<tr *ngFor="let customerRequest of customerRequests; let i = index">
+  <td>{{customerRequest.requestId}}</td>
+  <td>{{customerRequest.source}}</td>
+  <td>{{customerRequest.destination}}</td>
+  <td>{{customerRequest.customerId}}</td>
+  <!-- <td>Rs.{{estimate}}</td> -->
+  
+  <td><button class="btn btn-success" (click)="confirm()">Accept</button></td>
+  <td><button class="btn btn-warning" (click)="cancel(customerRequest)">Cancel</button></td>
+</tr>
+</table>
